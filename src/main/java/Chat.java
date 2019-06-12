@@ -12,7 +12,7 @@ public class Chat {
                     "  ?st + username          - \"show user status\"" + "\n" +
                     "  new#grupname            - \"create new group\"" + "\n" +
                     "  ?gr                     - \"show group list\"" + "\n" +
-                    "  join#grupname           - \"show group list\"" + "\n" +
+                    "  join#grupname           - \"join group\"" + "\n" +
                     "  #grupname + your_text   - \"send msg to this group\"" + "\n" +
                     "  q#grupname              - \"quite the group" + "\n" +
                     "  del#grupname            - \"delete group (for admin)" + "\n" +
@@ -20,7 +20,7 @@ public class Chat {
                     "  q                       - \"quite the chat\"" + "\n" +
                     "<--------------------------------------------------------------->" + "\n";
 
-    public static void enterCommonChat(Scanner scanner, String login, String sessionId) throws IOException {
+    public static void enterCommonChat(Scanner scanner, String login, String sessionId) {
         System.out.println(chatMenuActions);
         System.out.println(String.format("User %s entered the chat...", login));
 

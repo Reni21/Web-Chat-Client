@@ -13,11 +13,12 @@ public class Main {
                     "  q        - \"quite the app\"" + "\n" +
                     "<--------------------------------------------------------------->" + "\n";
 
-    public static void main(String[] args) throws IOException {
-        Scanner scanner = new Scanner(System.in);
-        startApp(scanner);
-        scanner.close();
-
+    public static void main(String[] args) {
+        try (Scanner scanner = new Scanner(System.in)) {
+            startApp(scanner);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public static void startApp(Scanner scanner) throws IOException {
