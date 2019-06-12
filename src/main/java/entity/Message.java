@@ -1,9 +1,13 @@
 package entity;
 
 import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.Date;
 
+@Getter
+@Setter
 @EqualsAndHashCode
 public class Message {
 	private Date date = new Date();
@@ -22,38 +26,5 @@ public class Message {
 				.append(" | " + from).append(" to: ").append(to + " >>" + "\n")
 				.append("- "+ text)
 				.toString();
-	}
-
-	
-	public Date getDate() {
-		return date;
-	}
-
-	public void setDate(Date date) {
-		this.date = date;
-	}
-
-	public String getFrom() {
-		return from;
-	}
-
-	public void setFrom(String from) {
-		this.from = from;
-	}
-
-	public String getTo() {
-		return to;
-	}
-
-	public void setTo(String to) {
-		this.to = to;
-	}
-
-	public String getText() {
-		return text;
-	}
-
-	public void setText(String text) {
-		this.text = text;
 	}
 }
